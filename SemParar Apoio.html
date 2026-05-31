@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SemParar Materiais de Apoio</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#111;
+    color:white;
+}
+
+header{
+    position:fixed;
+    width:100%;
+    padding:20px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,0.7);
+    z-index:100;
+}
+
+.logo{
+    color:red;
+    font-size:32px;
+    font-weight:bold;
+}
+
+nav{
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+}
+
+.hero{
+    height:100vh;
+    background:url('Fundo site.png') center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    padding:60px;
+    position:relative;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.65);
+}
+
+.content{
+    position:relative;
+    z-index:2;
+    max-width:650px;
+}
+
+.content h1{
+    font-size:85px;
+    margin-bottom:20px;
+    line-height:1;
+}
+
+.content span{
+    color:red;
+}
+
+.content p{
+    font-size:24px;
+    margin-bottom:30px;
+    line-height:1.5;
+    color:#ddd;
+}
+
+.buttons{
+    display:flex;
+    gap:15px;
+}
+
+button{
+    border:none;
+    padding:15px 30px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:18px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.play{
+    background:red;
+    color:white;
+}
+
+.play:hover{
+    background:#cc0000;
+}
+
+.info{
+    background:rgba(255,255,255,0.2);
+    color:white;
+}
+
+.info:hover{
+    background:rgba(255,255,255,0.35);
+}
+
+.movies{
+    padding:50px;
+}
+
+.movies h2{
+    margin-bottom:25px;
+    font-size:35px;
+}
+
+.movie-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.movie{
+    background:#1b1b1b;
+    border-radius:15px;
+    overflow:hidden;
+    transition:0.3s;
+    border:1px solid #2c2c2c;
+    height:100%;
+    display:flex;
+}
+
+.movie:hover{
+    transform:scale(1.03);
+    border-color:red;
+}
+
+.movie-content{
+    padding:30px;
+}
+
+.movie-content h3{
+    font-size:28px;
+    margin-bottom:10px;
+    color:white;
+}
+
+.movie-content p{
+    color:#bbb;
+    line-height:1.5;
+}
+
+.badge{
+    display:inline-block;
+    margin-top:15px;
+    background:red;
+    color:white;
+    padding:8px 15px;
+    border-radius:20px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+footer{
+    margin-top:50px;
+    padding:30px;
+    text-align:center;
+    color:#999;
+    border-top:1px solid #333;
+}
+
+@media(max-width:900px){
+
+    .movie-grid{
+        grid-template-columns:1fr;
+    }
+
+    .content h1{
+        font-size:55px;
+    }
+
+    nav{
+        display:none;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        SemParar Materiais de Apoio
+    </div>
+
+    <nav>
+    <a href="#">Início</a>
+
+    <a href="#apoios">
+        Materiais
+    </a>
+
+    <a href="#destaques">
+        Destaque Semanal
+    </a>
+
+    <a href="#campanhas">Campanhas</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+    <div class="overlay"></div>
+
+    <div class="content">
+
+        <h1>
+            Portal de <br>
+            <span>Treinamentos</span>
+        </h1>
+
+        <p>
+            Plataforma corporativa para acesso a treinamentos,
+            materiais de apoio e campanhas internas.
+        </p>
+
+        <div class="buttons">
+
+            <button class="play"
+            onclick="document.getElementById('apoios').scrollIntoView({behavior:'smooth'})">
+                ▶ Material
+            </button>
+
+            <button class="info"
+            onclick="window.location.href='https://semparar.beedoo.io/feed'">
+                Mais Informações
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="movies" id="apoios">
+
+    <h2>📚 Apoios Recentes</h2>
+
+    <div class="movie-grid">
+
+    <a href="Transferencia SPMAIS.pdf" target="_blank" style="text-decoration:none;">
+        <div class="movie">
+            <div class="movie-content">
+                <h3>SemParar Mais</h3>
+                <p>
+                    Conheça o passo a passo para o atendimento
+                    de um cliente Sem Parar Mais.
+                </p>
+                <div class="badge">
+                    Disponível
+                </div>
+            </div>
+        </div>
+    </a>
+        <a href="Checklist de Qualidade.pdf"
+   target="_blank"
+   style="text-decoration:none; display:block; color:inherit;">
+
+    <div class="movie">
+        <div class="movie-content">
+
+            <h3>Checklist de Qualidade</h3>
+
+            <p>
+                Aprenda os processos corretos e padrões
+                de qualidade no atendimento.
+            </p>
+
+            <div class="badge">
+                Disponível
+            </div>
+
+        </div>
+    </div>
+
+</a>
+</a>
+    </a>
+
+    <a href="Downsell.pdf" target="_blank" style="text-decoration:none;">
+        <div class="movie">
+            <div class="movie-content">
+                <h3>Downsell</h3>
+                <p>
+                    Material de apoio com estratégias de downsell
+                    para retenção e conversão de clientes.
+                </p>
+                <div class="badge">
+                    Disponível
+                </div>
+            </div>
+        </div>
+    </a>
+
+    <a href="Ação de Princing.pdf" target="_blank" style="text-decoration:none;">
+        <div class="movie">
+            <div class="movie-content">
+                <h3>Ação de Princing</h3>
+                <p>
+                    Confira os procedimentos e orientações sobre
+                    ações de princing e campanhas vigentes.
+                </p>
+                <div class="badge">
+                    Disponível
+                </div>
+            </div>
+        </div>
+    </a>
+
+    <div class="movie">
+        <div class="movie-content">
+            <h3>Em Breve</h3>
+            <p>
+                Novos treinamentos e conteúdos exclusivos
+                serão adicionados em breve.
+            </p>
+            <div class="badge">
+                Em Breve
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</section>
+
+<section class="movies" id="destaques">
+
+    <h2>🏆 Destaques</h2>
+
+    <div class="movie-grid">
+
+        <div class="movie">
+            <div class="movie-content">
+                <h3>Destaque da Semana</h3>
+                <p>
+                        Confira o colaborador destaque desta semana.
+                </p>
+                <div class="badge">
+                    Destaque
+                </div>
+            </div>
+        </div>
+
+        <div class="movie">
+    <div class="movie-content">
+        <h3>Destaques Anteriores</h3>
+
+        <p>
+            Confira os colaboradores destaques anteriores.
+        </p>
+
+        <div class="badge">
+            Histórico
+        </div>
+    </div>
+</div>
+</div>
+</section>
+
+<section class="movies" id="campanhas">
+
+    <h2>🎁 Campanhas</h2>
+
+    <div class="movie-grid">
+
+        <div class="movie">
+            <div class="movie-content">
+                <h3>Campanha Ativa</h3>
+
+                <p>
+                    Confira a campanha que esta disponível
+                    para participação neste momento.
+                </p>
+
+                <div class="badge">
+                    Ativa
+                </div>
+            </div>
+        </div>
+
+        <a href="https://drive.google.com/file/d/1LIF0dHHCiq2tpajcD2F3mn8vSsquLIql/view?usp=sharing"
+   target="_blank"
+   style="text-decoration:none;color:inherit;display:block;">
+
+    <div class="movie">
+        <div class="movie-content">
+
+            <h3>Campanhas Encerradas</h3>
+
+            <p>
+                Consulte as campanhas encerradas e acompanhe
+                os resultados anteriores.
+            </p>
+
+            <div class="badge">
+                Histórico
+            </div>
+
+        </div>
+    </div>
+
+</a>
+
+    </div>
+
+</section>
+<footer>
+
+    © 2026 SemParar Materiais de Apoio - Plataforma Corporativa
+
+</footer>
+</body>
+</html>
