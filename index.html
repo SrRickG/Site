@@ -28,7 +28,6 @@ header{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    gap:20px;
     background:rgba(0,0,0,0.7);
     z-index:100;
 }
@@ -49,40 +48,7 @@ nav a{
     text-decoration:none;
     font-size:18px;
 }
-#pesquisa{
-    width:300px;
-    padding:10px 15px;
-    border:none;
-    border-radius:20px;
-    background:#1b1b1b;
-    color:white;
-    font-size:14px;
-    outline:none;
-}
 
-#pesquisa::placeholder{
-    color:#999;
-}
-@media(max-width:900px){
-
-    .movie-grid{
-        grid-template-columns:1fr;
-    }
-
-    .content h1{
-        font-size:55px;
-    }
-
-    nav{
-        display:none;
-    }
-
-    #pesquisa{
-        width:100%;
-        max-width:250px;
-    }
-
-}
 .hero{
     height:100vh;
     background:url('Fundo site.png') center/cover no-repeat;
@@ -243,40 +209,7 @@ footer{
 
 </style>
 </head>
-<script>
 
-function filtrarMateriais() {
-
-    let filtro = document
-        .getElementById("pesquisa")
-        .value
-        .toLowerCase();
-
-    let cards = document.querySelectorAll(".movie");
-
-    cards.forEach(card => {
-
-        let titulo = card.querySelector("h3");
-
-        if(!titulo) return;
-
-        let texto = titulo.textContent.toLowerCase();
-
-        if(texto.includes(filtro) || filtro === ""){
-
-            card.parentElement.style.display = "";
-
-        }else{
-
-            card.parentElement.style.display = "none";
-
-        }
-
-    });
-
-}
-
-</script>
 <body>
 
 <header>
@@ -285,19 +218,19 @@ function filtrarMateriais() {
         SemParar Materiais de Apoio
     </div>
 
-    <input
-    type="text"
-    id="pesquisa"
-    placeholder="🔍 Pesquisar material..."
-    onkeyup="filtrarMateriais()"
->
-
     <nav>
-        <a href="#">Início</a>
-        <a href="#apoios">Materiais</a>
-        <a href="#destaques">Destaque Semanal</a>
-        <a href="#sistemas">Sistemas</a>
-    </nav>
+    <a href="#">Início</a>
+
+    <a href="#apoios">
+        Materiais
+    </a>
+
+    <a href="#destaques">
+        Destaque Semanal
+    </a>
+
+    <a href="#sistemas">Sistemas</a>
+</nav>
 
 </header>
 
