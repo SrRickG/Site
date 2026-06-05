@@ -182,7 +182,37 @@ button{
     font-size:14px;
     font-weight:bold;
 }
+.menu-mobile{
+    display:none;
+    font-size:30px;
+    color:white;
+    cursor:pointer;
+}
 
+@media(max-width:900px){
+
+    .menu-mobile{
+        display:block;
+    }
+
+    nav{
+        display:none;
+        position:absolute;
+        top:80px;
+        left:0;
+        width:100%;
+        background:#111;
+        padding:20px;
+        flex-direction:column;
+        gap:15px;
+        text-align:center;
+    }
+
+    nav.ativo{
+        display:flex;
+    }
+
+}
 footer{
     margin-top:50px;
     padding:30px;
@@ -222,15 +252,26 @@ footer{
 
 </style>
 </head>
+<script>
 
+function toggleMenu(){
+    document.querySelector("nav").classList.toggle("ativo");
+}
+
+</script>
 <body>
 
 <header>
 
-    <div class="logo">
-        SemParar Materiais de Apoio
-    </div>
+      <div style="display:flex; align-items:center; gap:15px;">
 
+        <div class="logo">
+            SemParar Materiais de Apoio
+        </div>
+
+        <div class="menu-mobile" onclick="toggleMenu()">
+            ☰
+        </div>
     <nav>
     <a href="#">Início</a>
 
