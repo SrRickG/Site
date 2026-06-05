@@ -261,23 +261,16 @@ function toggleMenu(){
     </div>
 
     <div class="menu-mobile" onclick="toggleMenu()">
-        ☰
-    </div>
+    ☰ Menu
+</div>
 
 </div>
 
-<nav>
+<nav id="menu">
     <a href="#">Início</a>
-
-    <a href="#apoios">
-        Materiais
-    </a>
-
-    <a href="#destaques">
-        Destaque Semanal
-    </a>
-
-    <a href="#sistemas">Sistemas</a>
+    <a href="#apoios" onclick="toggleMenu()">Materiais</a>
+    <a href="#destaques" onclick="toggleMenu()">Destaque Semanal</a>
+    <a href="#sistemas" onclick="toggleMenu()">Sistemas</a>
 </nav>
 
 </header>
