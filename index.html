@@ -224,16 +224,7 @@ footer{
 @media(max-width:900px){
 
     header{
-        flex-direction:column;
         padding:15px;
-        gap:10px;
-    }
-
-    nav{
-        display:flex;
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:15px;
     }
 
     nav a{
@@ -265,14 +256,17 @@ function toggleMenu(){
 
       <div style="display:flex; align-items:center; gap:15px;">
 
-        <div class="logo">
-            SemParar Materiais de Apoio
-        </div>
+    <div class="logo">
+        SemParar Materiais de Apoio
+    </div>
 
-        <div class="menu-mobile" onclick="toggleMenu()">
-            ☰
-        </div>
-    <nav>
+    <div class="menu-mobile" onclick="toggleMenu()">
+        ☰
+    </div>
+
+</div>
+
+<nav>
     <a href="#">Início</a>
 
     <a href="#apoios">
