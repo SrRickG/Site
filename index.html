@@ -50,12 +50,15 @@ nav a{
 }
 
 .hero{
-    height:100vh;
-    background:url('Fundo site.png') center/cover no-repeat;
-    display:flex;
-    align-items:center;
-    padding:60px;
-    position:relative;
+    background:url('Fundo site.png') center center/cover no-repeat;
+}
+
+@media(max-width:900px){
+
+    .hero{
+        background:url('Fundo-Mobile.png') center center/cover no-repeat;
+    }
+
 }
 
 .overlay{
