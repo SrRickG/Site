@@ -201,7 +201,7 @@ button{
         top:80px;
         left:0;
         width:100%;
-        background:#111;
+        background:transparent;
         padding:20px;
         flex-direction:column;
         gap:15px;
@@ -267,7 +267,7 @@ function toggleMenu(){
 </div>
 
 <nav id="menu">
-    <a href="#">Início</a>
+    <a href="#" onclick="toggleMenu()">Início</a>
     <a href="#apoios" onclick="toggleMenu()">Materiais</a>
     <a href="#destaques" onclick="toggleMenu()">Destaque Semanal</a>
     <a href="#sistemas" onclick="toggleMenu()">Sistemas</a>
