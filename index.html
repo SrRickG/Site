@@ -193,16 +193,29 @@ footer{
 
 @media(max-width:900px){
 
+    header{
+        flex-direction:column;
+        padding:15px;
+        gap:10px;
+    }
+
+    nav{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+    nav a{
+        font-size:16px;
+    }
+
     .movie-grid{
         grid-template-columns:1fr;
     }
 
     .content h1{
         font-size:55px;
-    }
-
-    nav{
-        display:none;
     }
 
 }
