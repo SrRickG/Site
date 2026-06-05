@@ -48,7 +48,26 @@ nav a{
     text-decoration:none;
     font-size:18px;
 }
+@media(max-width:900px){
 
+    .movie-grid{
+        grid-template-columns:1fr;
+    }
+
+    .content h1{
+        font-size:55px;
+    }
+
+    nav{
+        display:none;
+    }
+
+    #pesquisa{
+        width:100%;
+        max-width:250px;
+    }
+
+}
 .hero{
     height:100vh;
     background:url('Fundo site.png') center/cover no-repeat;
