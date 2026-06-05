@@ -243,7 +243,40 @@ footer{
 
 </style>
 </head>
+<script>
 
+function filtrarMateriais() {
+
+    let filtro = document
+        .getElementById("pesquisa")
+        .value
+        .toLowerCase();
+
+    let cards = document.querySelectorAll(".movie");
+
+    cards.forEach(card => {
+
+        let titulo = card.querySelector("h3");
+
+        if(!titulo) return;
+
+        let texto = titulo.textContent.toLowerCase();
+
+        if(texto.includes(filtro) || filtro === ""){
+
+            card.parentElement.style.display = "";
+
+        }else{
+
+            card.parentElement.style.display = "none";
+
+        }
+
+    });
+
+}
+
+</script>
 <body>
 
 <header>
@@ -253,10 +286,11 @@ footer{
     </div>
 
     <input
-        type="text"
-        id="pesquisa"
-        placeholder="🔍 Pesquisar material..."
-    >
+    type="text"
+    id="pesquisa"
+    placeholder="🔍 Pesquisar material..."
+    onkeyup="filtrarMateriais()"
+>
 
     <nav>
         <a href="#">Início</a>
