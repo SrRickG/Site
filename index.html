@@ -28,7 +28,6 @@ header{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    gap:20px;
     background:rgba(0,0,0,0.7);
     z-index:100;
 }
@@ -49,20 +48,7 @@ nav a{
     text-decoration:none;
     font-size:18px;
 }
-#pesquisa{
-    width:300px;
-    padding:10px 15px;
-    border:none;
-    border-radius:20px;
-    background:#1b1b1b;
-    color:white;
-    font-size:14px;
-    outline:none;
-}
 
-#pesquisa::placeholder{
-    color:#999;
-}
 .hero{
     height:100vh;
     background:url('Fundo site.png') center/cover no-repeat;
@@ -231,11 +217,7 @@ footer{
     <div class="logo">
         SemParar Materiais de Apoio
     </div>
-<input
-    type="text"
-    id="pesquisa"
-    placeholder="🔍 Pesquisar material..."
-    onkeyup="filtrarMateriais(SemParar Mais,Downsell,Checklist de Qualidade,Ação de Princing)">
+
     <nav>
     <a href="#">Início</a>
 
