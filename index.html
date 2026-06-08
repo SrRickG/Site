@@ -157,7 +157,10 @@ button{
     height:100%;
     display:flex;
 }
-
+.hall-fama{
+    margin-top:25px;
+    grid-column:1 / -1;
+}
 .movie:hover{
     transform:scale(1.03);
     border-color:red;
@@ -423,7 +426,7 @@ function toggleMenu(){
 
 <section class="movies" id="destaques">
 
-    <h2>🏆 Destaques</h2>
+    <h2>🥇 Destaques</h2>
 
     <div class="movie-grid">
 
@@ -452,6 +455,23 @@ function toggleMenu(){
         </div>
     </div>
 </div>
+</div>
+<div class="movie hall-fama">
+    <div class="movie-content">
+
+        <h3>⭐ Lendas da Operação</h3>
+
+        <p>
+            Reconhecimento aos colaboradores e equipes
+            que marcaram a história da operação através
+            de resultados, qualidade e dedicação.
+        </p>
+
+        <div class="badge">
+            🗓️ Mensal
+        </div>
+
+    </div>
 </div>
 </section>
 
