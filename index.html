@@ -8,15 +8,12 @@
 
 <style>
 
-html{
-    scroll-behavior:smooth;
-}
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
     font-family:Arial, Helvetica, sans-serif;
+    scroll-behavior:smooth;
 }
 
 body{
@@ -159,6 +156,24 @@ button{
     border:1px solid #2c2c2c;
     height:100%;
     display:flex;
+.em-breve{
+    position:relative;
+    overflow:hidden;
+}
+
+.em-breve::before{
+    content:'🚧 Em Breve';
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.65);
+    backdrop-filter:blur(4px);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    font-weight:bold;
+    color:white;
+    z-index:10;
 }
 .hall-fama{
     margin-top:25px;
@@ -433,7 +448,7 @@ function toggleMenu(){
 
     <div class="movie-grid">
 
-        <div class="movie">
+        <div class="movie em-breve">
             <div class="movie-content">
                 <h3>Destaque da Semana</h3>
                 <p>
@@ -444,7 +459,7 @@ function toggleMenu(){
                 </div>
             </div>
         </div>
-    <div class="movie">
+    <div class="movie em-breve">
     <div class="movie-content">
 
         <h3> Equipe Destaque</h3>
@@ -460,7 +475,7 @@ function toggleMenu(){
 
     </div>
 </div>
-        <div class="movie">
+        <div class="movie em-breve">
     <div class="movie-content">
         <h3>Destaques Anteriores</h3>
 
@@ -474,7 +489,7 @@ function toggleMenu(){
     </div>
 </div>
 </div>
-<div class="movie hall-fama">
+<div class="movie em-breve">
     <div class="movie-content">
 
         <h3>⭐ Lendas da Operação</h3>
@@ -499,7 +514,7 @@ function toggleMenu(){
 
     <div class="movie-grid">
 
-        <div class="movie">
+        <div class="movie em-breve">
             <div class="movie-content">
 
                 <h3>Beedoo</h3>
@@ -516,7 +531,7 @@ function toggleMenu(){
             </div>
         </div>
 
-        <div class="movie">
+        <div class="movie em-breve">
             <div class="movie-content">
 
                 <h3>Salesforce</h3>
