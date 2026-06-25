@@ -156,28 +156,36 @@ button{
     border:1px solid #2c2c2c;
     height:100%;
     display:flex;
+}
+.hall-fama{
+    margin-top:25px;
+    grid-column:1 / -1;
+}
 .em-breve{
     position:relative;
     overflow:hidden;
 }
 
-.em-breve::before{
-    content:'🚧 Em Breve';
+.em-breve .movie-content{
+    filter:blur(3px);
+    opacity:0.6;
+}
+
+.em-breve::after{
+    content:"🚀 Em Breve";
     position:absolute;
-    inset:0;
-    background:rgba(0,0,0,0.65);
-    backdrop-filter:blur(4px);
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.75);
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
     font-size:28px;
     font-weight:bold;
     color:white;
-    z-index:10;
-}
-.hall-fama{
-    margin-top:25px;
-    grid-column:1 / -1;
+    z-index:999;
 }
 .movie:hover{
     transform:scale(1.03);
@@ -425,7 +433,7 @@ function toggleMenu(){
             </div>
         </div>
     </a>
-    <div class="movie">
+    <div class="movie em-breve">
         <div class="movie-content">
             <h3>Em Breve</h3>
             <p>
