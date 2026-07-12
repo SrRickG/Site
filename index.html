@@ -223,7 +223,69 @@ button{
     color:white;
     cursor:pointer;
 }
+/* ===== TELA DE ENTRADA ===== */
 
+#intro{
+    position:fixed;
+    inset:0;
+    z-index:99999;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    transition:opacity .8s ease;
+}
+
+#intro img{
+    position:absolute;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+#intro::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.45);
+}
+
+.intro-content{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    color:white;
+}
+
+.intro-content h1{
+    font-size:72px;
+    font-weight:800;
+    margin-bottom:10px;
+}
+
+.intro-content p{
+    font-size:24px;
+    color:#ddd;
+    margin-bottom:40px;
+}
+
+.intro-btn{
+    background:#E50914;
+    color:#fff;
+    border:none;
+    padding:18px 60px;
+    border-radius:8px;
+    font-size:22px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 10px 30px rgba(229,9,20,.35);
+}
+
+.intro-btn:hover{
+    background:#ff1f2d;
+    transform:scale(1.05);
+}
 @media(max-width:900px){
 
     .menu-mobile{
@@ -284,8 +346,36 @@ function toggleMenu(){
     document.querySelector("nav").classList.toggle("ativo");
 }
 
+function entrarSite(){
+
+    document.getElementById("intro").style.opacity = "0";
+
+    setTimeout(function(){
+        document.getElementById("intro").style.display = "none";
+    }, 800);
+
+}
+
 </script>
 <body>
+
+<div id="intro">
+
+    <img src="carro.gif" alt="SemParar">
+
+    <div class="intro-content">
+
+        <h1>SemParar</h1>
+
+        <p>Portal de Materiais de Apoio</p>
+
+        <button class="intro-btn" onclick="entrarSite()">
+            ▶ INICIAR
+        </button>
+
+    </div>
+
+</div>
 
 <header>
 
